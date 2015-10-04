@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Naive Bayes and Unknowing Racism
-date: 2015-10-02
+date: 2015-10-03
 author: Aaron Norby
 categories: machine-learning racism
 ---
@@ -142,9 +142,11 @@ There are many approaches that one can take to text classification using machine
 learning, and the options in JavaScript are somewhat limited (other languages like
 Python and R have much bigger communities dedicated to this stuff). But JavaScript
 does have some good options.  The one I'm using is a Naive Bayes classifier
-provided by the Natural package. (If you've never heard of Naive Bayes, what makes
+provided by the [Natural][natural] package. (If you've never heard of Naive Bayes, what makes
 it 'naive' is that it makes a strong independence assumption about the structure of
 your data; but that's the topic of a different post.)
+
+[natural]:https://github.com/NaturalNode/natural
 
 Basically, it works like this. I get a lot of sentences from news sources (in this
 case, the New York Times) and then label them by topic (more later on ways to do

@@ -11,7 +11,7 @@ Angular, D3, etc). I've also been an academic, teaching and doing research in
 cognitive science and philosophy. In my software projects and in my writings on
 this blog, I'm trying to bring these two together. 
 
-Credit: this blog is made with [Jekyll][jekyll] using the [Centrarium][centrarium]
+Credit: this site is made with [Jekyll][jekyll] using the [Centrarium][centrarium]
 theme by [Ben Centra][bencentra].  All photos: Esther Shubert. 
 
 

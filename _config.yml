@@ -10,7 +10,7 @@ name: Aaron Norby
 description: > 
   Minds and machines
 baseurl: "/" # the subpath of your site, e.g. /blog/
-#url: "http://www.aaronnorby.com" # the base hostname & protocol for your site
+#url: "http://aaronnorby.github.io" # the base hostname & protocol for your site
 cover: "assets/header_image.jpg"
 # logo: "assets/logo.png"
 
