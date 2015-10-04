@@ -6,20 +6,74 @@ author: Aaron Norby
 categories: machine-learning racism
 ---
 
-# Naive Bayes and Unknowing Racism
+__What this is about__: analyzing text using machine learning to combat our own implicit
+biases. What's implicit bias? It's bias (eg, racism) that you do not consciously
+endorse but that manifests itself in the way you treat others, think, talk, and
+behave, sometimes very subtly and sometimes in glaring ways. 
 
-I'm in the midst of building a tool to detect bias in published text. I conceive of
-it as being particularly useful for those who do blogging or new writing (and are
-concerned about their own implicit biases).  
+__The tl;dr__: maybe we can categorize text that we write as being about particular
+privileged groups (eg, white male) and non-privileged groups (eg, black, female)
+and by what kind of language it uses, in order make statistical comparisons and
+thus discover bias in our own writing. After describing the problem of implicit
+bias, I present my current attempt at writing software to do just this, in JavaScript.
 
-I was inspired to try and make this thing after reading [this
-article](http://www.huffingtonpost.com/john-metta/i-racist_b_7770652.html).
-Although this was not by a long shot the first article I'd read discussing issues
-of implicit bias and racism, it does contain what I think is probably the best
-example I've seen of how implicit bias can influence one's decisions in spite of
-any intentions one has to the contrary.  He points to subtle differences in
-language, how "a white person smoking pot is a 'Hippie' and a Black person doing it
-is a 'criminal'".  Here's the really incredible example, quoting from Metta:
+-----
+
+We humans are pretty good at thinking, but sometimes we think
+too fast - relying on assumptions and jumping to conclusions that, in some
+contexts, we'd be better off taking a second look at. But to do
+that we need to slow down. And to do that (to do it smartly, anyway) we need to
+know *when* to slow down and think twice. Computers think fast, but not in the way
+that we do. Computers think fast by thinking a large number of things very very quickly. Humans
+think fast by taking shortcuts that allow us to reduce the *number* of things that
+need to be thought (we may also think a large number of things, maybe in parallel,
+but that's another post).  Humans skip steps, computers don't. In this sense,
+computers always think slowly. So maybe we can use this fact to develop software
+that will help tell us when we're thinking too fast - when we're relying on
+assumptions that we shouldn't be. (Some people are have a greater tendency to slow
+down and not rely on intuitive judgments than others: see [here][slow].)
+
+[slow]: http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2644392
+
+Human cognition works as well as it does (which is pretty well) in no small part
+because of the strategic shortcuts that the mind has evolved to employ. We don't
+stop to collect every last piece of information before making a decision because
+there isn't time and collecting information can be costly. So we make guesses. And
+some of these guesses are hard-wired into us. But many of these guesses involve
+other people: we use stereotypes to navigate the social world because we simply
+cannot learn everything there is to know about a person before deciding how to
+interact with them. 
+
+Our stereotypes, however, come in no small part from our culture. And in a culture
+where there are oppressed minorities who are subject to negative stereotyping, we
+are going to tend to absorb those negative stereotypes. It does not matter if you
+don't endorse them. Your mind absorbs them just by seeing them used by others.
+So, when you see tv show after tv show, news story after news story, depicting
+black men as violent criminals, there is going to be a part of your mind that turns
+on whenever you encounter a black man and whispers in your ear 'that person is
+dangerous'. You might *know* that that's a biased stereotype, and you might not
+*want* to have any part of your mind whispering things like this to you. But the
+reality is that you have only so much direct control over your own mind. 
+
+Implicit biases are a lot like habits. You might not want to have a habit, but once
+you've got it you can't get rid of it just by deciding to. That's why you keep
+looking for your playlists where iTunes *used* to put them and not where iTunes
+puts them now (and is also why it's so annoying when these things get moved around
+is maybe is kind of a mistake for Apple to keep doing that). 
+
+## Software to tell us when we're letting our implicit biases talk for us
+
+If implicit biases are like habits, it would be good to have something to help us
+change our habits and to let us know when our biases are driving our behaviors. 
+
+One place where bias shows itself is in the way we write. My inspiration here is
+[this article](http://www.huffingtonpost.com/john-metta/i-racist_b_7770652.html) by
+John Metta. It contains what I think is probably the best example I've seen of how
+implicit bias can influence one's decisions in spite of any intentions one has to
+the contrary.  He points to subtle differences in language, to how "a white person
+smoking pot is a 'Hippie' and a Black person doing it is a 'criminal'", and then
+points out just the most perfect example you could imagine.  Here's the example,
+quoting from Metta:
 
 > There's a headline from *The Independent* that sums this up quite nicely:
 "Charleston shooting: Black and Muslim killers are 'terrorists' and 'thugs'. Why
@@ -71,6 +125,8 @@ like to hear about it.
 In this post, I'm going to describe the work I've done on (1). In later posts I
 plan on talking about (2) and (3) as well as how I get my training data using the
 New York Times API, and what training data might be better suited to my purposes.
+But, basically, (2) involves using sentiment analysis to look at the groups of
+sentences categorized by (1), and (3) involves simply comparing means. 
 
 
 ## Classifying text
@@ -194,9 +250,5 @@ we humans are supposed to be able (to some degree) to ignore these things and le
 the computers extract whatever patterns best fit the data, and any overfitting that
 might result from keying to proper names should be taken care of with a large
 enough data set.  That, anyway, is how it's supposed to go. In theory.
-
-
-
-
 
 

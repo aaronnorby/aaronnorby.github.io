@@ -4,4 +4,4 @@ title: Projects
 permalink: /projects/
 ---
 
-This is where I describe my projects.
+Coming soon. For now, check out my work on [GitHub](https://github.com/aaronnorby).
