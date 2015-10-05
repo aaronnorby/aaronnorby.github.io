@@ -30,7 +30,7 @@ need to be thought (we may also think a large number of things, maybe in paralle
 but that's another post).  Humans skip steps, computers don't. In this sense,
 computers always think slowly. So maybe we can use this fact to develop software
 that will help tell us when we're thinking too fast - when we're relying on
-assumptions that we shouldn't be. (Some people are have a greater tendency to slow
+assumptions that we shouldn't be. (Some people have a greater tendency to slow
 down and not rely on intuitive judgments than others: see [here][slow].)
 
 [slow]: http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2644392
@@ -59,7 +59,7 @@ Implicit biases are a lot like habits. You might not want to have a habit, but o
 you've got it you can't get rid of it just by deciding to. That's why you keep
 looking for your playlists where iTunes *used* to put them and not where iTunes
 puts them now (and is also why it's so annoying when these things get moved around
-is maybe is kind of a mistake for Apple to keep doing that). 
+and is maybe kind of a mistake for Apple to keep doing that). 
 
 ## Software to tell us when we're letting our implicit biases talk for us
 
