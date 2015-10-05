@@ -53,7 +53,11 @@ black men as violent criminals, there is going to be a part of your mind that tu
 on whenever you encounter a black man and whispers in your ear 'that person is
 dangerous'. You might *know* that that's a biased stereotype, and you might not
 *want* to have any part of your mind whispering things like this to you. But the
-reality is that you have only so much direct control over your own mind. 
+reality is that you have only so much direct control over your own mind. (Although
+that's not to say that we aren't responsible for our implicit biases; I think
+the question of responsibility here is incredibly difficult - but I think it *is*
+our responsibility to do what we can to correct these biases, both because they're
+harmful and because they're mutually-reinforcing.)
 
 Implicit biases are a lot like habits. You might not want to have a habit, but once
 you've got it you can't get rid of it just by deciding to. That's why you keep
