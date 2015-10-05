@@ -142,11 +142,28 @@ There are many approaches that one can take to text classification using machine
 learning, and the options in JavaScript are somewhat limited (other languages like
 Python and R have much bigger communities dedicated to this stuff). But JavaScript
 does have some good options.  The one I'm using is a Naive Bayes classifier
-provided by the [Natural][natural] package. (If you've never heard of Naive Bayes, what makes
-it 'naive' is that it makes a strong independence assumption about the structure of
-your data; but that's the topic of a different post.)
+provided by the [Natural][natural] package. 
 
 [natural]:https://github.com/NaturalNode/natural
+
+If you've never heard of Naive Bayes, what makes it 'naive' is that it makes a
+strong independence assumption about the structure of your data (what Bayesian
+prediction in general is, is a topic for another post). A Bayesian classifier is
+trying to make predictions about data its never seen before by using attributes of
+that data, on the basis of the relationship its already seen between those same
+kinds of attributes and past data. For example, maybe a classifier is trying to
+predict the voter registration status of people on the basis of what state they
+live in and their income (after having already been given a large dataset with
+other people's voter status, income, and state). Naive Bayes assumes that income
+level and state of residence are independent from each other - that you get no
+predictive power for one by knowing the other. Of course, they aren't actually
+independent. But making this assumption greatly reduces the complexity of the
+computations that need to be done. Indeed, it renders otherwise intractable
+problems computationally feasible. And in many cases, including that of text
+classification, the assumption, though false, allows for high predictive accuracy.
+(See, for example, the explanations offered [here][stanford].)
+
+[stanford]:https://web.stanford.edu/class/cs124/lec/naivebayes.pdf
 
 Basically, it works like this. I get a lot of sentences from news sources (in this
 case, the New York Times) and then label them by topic (more later on ways to do
@@ -157,7 +174,7 @@ to contain the scope of the project.) Again, there should be questions here: the
 subject of a sentence is almost never a clear-cut matter; the hope is that with
 enough training data, ambiguity in classification will be minimized.  
 
-Labeled training data look like this: 
+Labeled training data look like this (in a file called 'data.json'): 
 
 ~~~javascript
 {
