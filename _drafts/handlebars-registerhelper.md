@@ -1,20 +1,21 @@
 ---
 layout: post
-title: Use Handlebars registerHelper to reformat template dates
-date: 2015-10-20
+title: Use Handlebars registerHelper to reformat dates inside of templates
+date: 2015-11-01
 author: Aaron Norby
 categories: templates handlebars
 ---
 
-Handlebars is a great, straightforward and easy-to-use templating language. It's
+[Handlebars][handlebarslink] is a great, straightforward and easy-to-use templating language. It's
 *very* easy to use when the data you're feeding into it is already formatted in the
 way you want to display it. For example, if you have dates that are in the
 YYYY-MM-DD order you want to show them in. But it's a bit more complicated if you
 want to move things around inside the template before rendering them. Say you
 have an object like this: 
 
-~~~javascript
+[handlebarslink]: http://handlebarsjs.com
 
+~~~javascript
 var data = {
   name: 'Aaron',
   species: 'human',
