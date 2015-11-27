@@ -7,7 +7,7 @@ permalink: /about/
 <img src="{{ site.baseurl }}assets/aaronProfilePic.jpg" title="Profile Picture" class="profile">
 
 I'm a full-stack software engineer specializing in JavaScipt and friends (Node,
-Angular, D3, etc). I've also been an academic, teaching and doing research in
+Angular, React, D3, etc). I've also been an academic, teaching and doing research in
 cognitive science and philosophy. In my software projects and in my writings on
 this blog, I'm trying to bring these two together. 
 
