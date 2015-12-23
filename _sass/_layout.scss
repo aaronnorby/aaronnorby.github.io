@@ -323,6 +323,39 @@ pre code.hljs {
 			padding-bottom: 0.5em;
  		}
 	}
+  /* 
+  * Projects
+  */
+  .projects-content {
+    @include outer-container;
+    .project {
+      @include span-columns(12);
+      margin-bottom: 2em;
+      .project-image {
+        @include span-columns(8 of 12);
+        overflow: hidden;
+        box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
+      }
+      img {
+        width: 100%;
+        transition: all .5s ease-out;
+        &:hover {
+          transition: transform 1.5s ease-in;
+          transform: scale(1.5);
+          @media screen and (max-width: 480px) {
+            transform: none;
+          }  
+        }
+      }
+      .project-description {
+        @include span-columns(4 of 12);
+        h3, p {
+          margin-bottom: 0;
+        }
+        
+      }
+    }
+  }
 }
 
 /*
