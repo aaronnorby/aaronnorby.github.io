@@ -18,6 +18,13 @@ cover: "assets/header_image.jpg"
 markdown: kramdown
 paginate: 5
 paginate_path: "/page:num/"
+  
+
+# Collections 
+collections:
+  projects: 
+    output: false
+
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
 
