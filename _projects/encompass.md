@@ -6,4 +6,5 @@ image: encompass.jpg
 imageAlt: encompass screenshot
 website: http://encompass.space/
 code: https://github.com/EncompassHR/Encompass
+order: 2
 ---
