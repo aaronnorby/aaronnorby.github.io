@@ -102,9 +102,9 @@ const INITIAL_STATE = {
 function reducer(state = INITIAL_STATE, action) {
   switch(action.type) {
     case 'BY_LAND':
-      return Object.assign({}, state, {byLand: false, byLand: true});
+      return Object.assign({}, state, {bySea: false, byLand: true});
     case 'BY_SEA':
-      return Object.assign({}, state, {byLand: true, byLand: false});
+      return Object.assign({}, state, {bySea: true, byLand: false});
     default:
       return state;
   }
@@ -180,9 +180,9 @@ const INITIAL_STATE = {
 function reducer(state = INITIAL_STATE, action) {
   switch(action.type) {
     case 'BY_LAND':
-      return Object.assign({}, state, {byLand: false, byLand: true, distance: action.distance});
+      return Object.assign({}, state, {bySea: false, byLand: true, distance: action.distance});
     case 'BY_SEA':
-      return Object.assign({}, state, {byLand: true, byLand: false, distance: action.distance});
+      return Object.assign({}, state, {bySea: true, byLand: false, distance: action.distance});
     default:
       return state;
   }
